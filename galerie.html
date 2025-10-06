@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez la galerie d'événements du Collège & Lycée Keur Serigne Touba. Sorties, concours, cérémonies et moments forts de notre établissement.">
+    <meta name="keywords" content="galerie, événements, sorties, concours, cérémonies, école">
+    <title>Galerie d'Événements - Collège & Lycée Keur Serigne Touba</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- TailwindCSS Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#0ea5e9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl text-gray-800">Keur Serigne Touba</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                        <a href="presentation.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Présentation</a>
+                        <a href="equipe.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Équipe</a>
+                        <a href="galerie.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium bg-blue-50">Galerie</a>
+                        <a href="blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Actualités</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                <a href="presentation.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Présentation</a>
+                <a href="equipe.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Équipe</a>
+                <a href="galerie.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-blue-50">Galerie</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Actualités</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Galerie d'Événements</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez les moments forts, les sorties éducatives, les concours et les cérémonies 
+                    qui rythment la vie de notre établissement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors" data-filter="all">
+                    <i class="fas fa-images mr-2"></i>
+                    Tous les événements
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors border" data-filter="ceremonies">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    Cérémonies
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors border" data-filter="concours">
+                    <i class="fas fa-trophy mr-2"></i>
+                    Concours
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors border" data-filter="sorties">
+                    <i class="fas fa-bus mr-2"></i>
+                    Sorties éducatives
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors border" data-filter="sport">
+                    <i class="fas fa-futbol mr-2"></i>
+                    Sports
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors border" data-filter="culturel">
+                    <i class="fas fa-theater-masks mr-2"></i>
+                    Culturel
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
+                <!-- Cérémonie de remise des diplômes -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="ceremonies" data-year="2024">
+                    <img src="assets/img/gallery-1.jpg" alt="Cérémonie de remise des diplômes 2024" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-primary text-white px-2 py-1 rounded-full text-xs font-semibold">Cérémonie</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Remise des diplômes</h3>
+                        <p class="text-sm text-gray-600">Cérémonie émouvante pour nos bacheliers 2024</p>
+                    </div>
+                </div>
+
+                <!-- Concours de mathématiques -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="concours" data-year="2024">
+                    <img src="assets/img/gallery-2.jpg" alt="Concours de mathématiques" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Concours</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Concours régional de maths</h3>
+                        <p class="text-sm text-gray-600">Nos élèves brillent au concours régional</p>
+                    </div>
+                </div>
+
+                <!-- Sortie au musée -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="sorties" data-year="2024">
+                    <img src="assets/img/gallery-3.jpg" alt="Sortie au musée" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Sortie</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Visite du musée IFAN</h3>
+                        <p class="text-sm text-gray-600">Découverte du patrimoine culturel sénégalais</p>
+                    </div>
+                </div>
+
+                <!-- Tournoi de football -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="sport" data-year="2024">
+                    <img src="assets/img/gallery-4.jpg" alt="Tournoi de football" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Sport</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Tournoi inter-classes</h3>
+                        <p class="text-sm text-gray-600">Compétition de football entre les classes</p>
+                    </div>
+                </div>
+
+                <!-- Festival de théâtre -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="culturel" data-year="2024">
+                    <img src="assets/img/gallery-5.jpg" alt="Festival de théâtre" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Culturel</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Festival de théâtre</h3>
+                        <p class="text-sm text-gray-600">Représentations théâtrales des élèves</p>
+                    </div>
+                </div>
+
+                <!-- Cérémonie de rentrée -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="ceremonies" data-year="2024">
+                    <img src="assets/img/gallery-6.jpg" alt="Cérémonie de rentrée" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-primary text-white px-2 py-1 rounded-full text-xs font-semibold">Cérémonie</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Cérémonie de rentrée</h3>
+                        <p class="text-sm text-gray-600">Accueil des nouveaux élèves</p>
+                    </div>
+                </div>
+
+                <!-- Sortie au zoo -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="sorties" data-year="2024">
+                    <img src="assets/img/gallery-7.jpg" alt="Sortie au zoo" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Sortie</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Visite du parc zoologique</h3>
+                        <p class="text-sm text-gray-600">Découverte de la faune africaine</p>
+                    </div>
+                </div>
+
+                <!-- Concours d'orthographe -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="concours" data-year="2024">
+                    <img src="assets/img/gallery-8.jpg" alt="Concours d'orthographe" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Concours</span>
+                            <span class="text-gray-500 text-sm">2024</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Concours d'orthographe</h3>
+                        <p class="text-sm text-gray-600">Compétition de maîtrise du français</p>
+                    </div>
+                </div>
+
+                <!-- Tournoi de basketball -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="sport" data-year="2023">
+                    <img src="assets/img/gallery-9.jpg" alt="Tournoi de basketball" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Sport</span>
+                            <span class="text-gray-500 text-sm">2023</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Championnat de basketball</h3>
+                        <p class="text-sm text-gray-600">Compétition inter-établissements</p>
+                    </div>
+                </div>
+
+                <!-- Spectacle de danse -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="culturel" data-year="2023">
+                    <img src="assets/img/gallery-10.jpg" alt="Spectacle de danse" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Culturel</span>
+                            <span class="text-gray-500 text-sm">2023</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Gala de danse traditionnelle</h3>
+                        <p class="text-sm text-gray-600">Présentation des danses du Sénégal</p>
+                    </div>
+                </div>
+
+                <!-- Sortie à Gorée -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="sorties" data-year="2023">
+                    <img src="assets/img/gallery-11.jpg" alt="Sortie à Gorée" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Sortie</span>
+                            <span class="text-gray-500 text-sm">2023</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Visite de l'île de Gorée</h3>
+                        <p class="text-sm text-gray-600">Leçon d'histoire sur l'esclavage</p>
+                    </div>
+                </div>
+
+                <!-- Cérémonie de fin d'année -->
+                <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer" data-category="ceremonies" data-year="2023">
+                    <img src="assets/img/gallery-12.jpg" alt="Cérémonie de fin d'année" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-primary text-white px-2 py-1 rounded-full text-xs font-semibold">Cérémonie</span>
+                            <span class="text-gray-500 text-sm">2023</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Fête de fin d'année</h3>
+                        <p class="text-sm text-gray-600">Célébration des réussites de l'année</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour afficher les images en grand -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button id="closeModal" class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="" class="max-w-full max-h-full rounded-lg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-lg">
+                <h3 id="modalTitle" class="text-white text-xl font-semibold mb-2"></h3>
+                <p id="modalDescription" class="text-gray-200"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistiques Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nos Événements en Chiffres</h2>
+                <p class="text-xl text-blue-100">Une vie scolaire riche et variée</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+                    <div class="text-xl">Événements par an</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">15</div>
+                    <div class="text-xl">Sorties éducatives</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">8</div>
+                    <div class="text-xl">Concours nationaux</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">100%</div>
+                    <div class="text-xl">Participation élèves</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Une vie scolaire riche et épanouissante
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Nos événements et activités contribuent à l'épanouissement complet de nos élèves 
+                et renforcent l'esprit de communauté de notre établissement.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar mr-2"></i>
+                    Participer aux événements
+                </a>
+                <a href="blog.html" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-newspaper mr-2"></i>
+                    Voir les actualités
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl">Collège & Lycée Keur Serigne Touba</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Former aujourd'hui les leaders de demain. Un établissement d'excellence qui prépare 
+                        nos élèves à relever les défis du monde moderne.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="presentation.html" class="text-gray-300 hover:text-primary transition-colors">Présentation</a></li>
+                        <li><a href="equipe.html" class="text-gray-300 hover:text-primary transition-colors">Équipe pédagogique</a></li>
+                        <li><a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary transition-colors">Actualités</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Dakar, Sénégal</p>
+                        <p><i class="fas fa-phone mr-2"></i> +221 33 123 45 67</p>
+                        <p><i class="fas fa-envelope mr-2"></i> contact@keurserignetouba.edu.sn</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Collège & Lycée Keur Serigne Touba. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

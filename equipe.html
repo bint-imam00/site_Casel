@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre équipe pédagogique qualifiée et engagée. Enseignants, administration et personnel du Collège & Lycée Keur Serigne Touba.">
+    <meta name="keywords" content="enseignants, équipe pédagogique, proviseur, administration, école">
+    <title>Équipe Pédagogique - Collège & Lycée Keur Serigne Touba</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- TailwindCSS Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#0ea5e9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl text-gray-800">Keur Serigne Touba</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                        <a href="presentation.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Présentation</a>
+                        <a href="equipe.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium bg-blue-50">Équipe</a>
+                        <a href="galerie.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Galerie</a>
+                        <a href="blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Actualités</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                <a href="presentation.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Présentation</a>
+                <a href="equipe.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-blue-50">Équipe</a>
+                <a href="galerie.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Galerie</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Actualités</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Notre Équipe Pédagogique</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez les enseignants qualifiés et le personnel administratif qui 
+                    accompagnent vos enfants dans leur parcours éducatif.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Administration Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Direction & Administration</h2>
+                <p class="text-xl text-gray-600">Les responsables qui dirigent notre établissement</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proviseur -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="assets/img/proviseur.jpg" alt="M. Amadou Diallo" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Proviseur
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">M. Amadou Diallo</h3>
+                        <p class="text-gray-600 mb-4">Proviseur</p>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Docteur en Sciences de l'Éducation avec 15 ans d'expérience. 
+                            Passionné par l'innovation pédagogique et l'accompagnement des élèves.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="mailto:proviseur@keurserignetouba.edu.sn" class="text-primary hover:text-blue-700">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proviseur Adjoint -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="assets/img/proviseur-adjoint.jpg" alt="Mme Fatou Sarr" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Proviseur Adjoint
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mme Fatou Sarr</h3>
+                        <p class="text-gray-600 mb-4">Proviseur Adjoint</p>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Master en Administration Scolaire. Spécialisée dans la gestion 
+                            pédagogique et l'orientation des élèves vers la réussite.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="mailto:adjoint@keurserignetouba.edu.sn" class="text-primary hover:text-blue-700">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comptable -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="assets/img/comptable.jpg" alt="M. Mamadou Ba" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Comptable
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">M. Mamadou Ba</h3>
+                        <p class="text-gray-600 mb-4">Comptable Principal</p>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Expert-comptable diplômé. Responsable de la gestion financière 
+                            et administrative de l'établissement depuis 8 ans.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="mailto:comptabilite@keurserignetouba.edu.sn" class="text-primary hover:text-blue-700">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enseignants Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Enseignants</h2>
+                <p class="text-xl text-gray-600">Des professeurs qualifiés et passionnés par leur métier</p>
+            </div>
+            
+            <!-- Filtres par matière -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors" data-filter="all">
+                    Tous
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-filter="mathematiques">
+                    Mathématiques
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-filter="francais">
+                    Français
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-filter="sciences">
+                    Sciences
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-filter="histoire">
+                    Histoire-Géo
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-filter="langues">
+                    Langues
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="teachers-grid">
+                <!-- Professeur de Mathématiques -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="mathematiques">
+                    <img src="assets/img/teacher-1.jpg" alt="M. Ibrahim Fall" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">M. Ibrahim Fall</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Mathématiques</p>
+                        <p class="text-xs text-gray-500">
+                            Agrégé de Mathématiques, 12 ans d'expérience
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur de Français -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="francais">
+                    <img src="assets/img/teacher-2.jpg" alt="Mme Aïcha Diop" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">Mme Aïcha Diop</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Français & Littérature</p>
+                        <p class="text-xs text-gray-500">
+                            Docteure en Lettres Modernes, passionnée de théâtre
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur de Physique-Chimie -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="sciences">
+                    <img src="assets/img/teacher-3.jpg" alt="M. Cheikh Ndiaye" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">M. Cheikh Ndiaye</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Physique-Chimie</p>
+                        <p class="text-xs text-gray-500">
+                            Ingénieur Chimiste, spécialiste des expériences
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur d'Histoire-Géographie -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="histoire">
+                    <img src="assets/img/teacher-4.jpg" alt="Mme Mariama Gueye" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">Mme Mariama Gueye</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Histoire-Géographie</p>
+                        <p class="text-xs text-gray-500">
+                            Master en Histoire, passionnée d'Afrique
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur d'Anglais -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="langues">
+                    <img src="assets/img/teacher-5.jpg" alt="M. Samba Traoré" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">M. Samba Traoré</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Anglais</p>
+                        <p class="text-xs text-gray-500">
+                            Bilingue natif, formateur TOEFL
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur de SVT -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="sciences">
+                    <img src="assets/img/teacher-6.jpg" alt="Mme Khadija Mbaye" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">Mme Khadija Mbaye</h3>
+                        <p class="text-sm text-primary font-medium mb-2">SVT</p>
+                        <p class="text-xs text-gray-500">
+                            Docteure en Biologie, experte en environnement
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur de Mathématiques -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="mathematiques">
+                    <img src="assets/img/teacher-7.jpg" alt="M. Moussa Cissé" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">M. Moussa Cissé</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Mathématiques</p>
+                        <p class="text-xs text-gray-500">
+                            Agrégé, spécialiste des concours
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Professeur d'Espagnol -->
+                <div class="teacher-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-matiere="langues">
+                    <img src="assets/img/teacher-8.jpg" alt="Mme Fatou Bâ" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-1">Mme Fatou Bâ</h3>
+                        <p class="text-sm text-primary font-medium mb-2">Espagnol</p>
+                        <p class="text-xs text-gray-500">
+                            Native hispanophone, passionnée de culture latine
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personnel de Support Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Personnel de Support</h2>
+                <p class="text-xl text-gray-600">Des professionnels dévoués au service de nos élèves</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Surveillant Général -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-shield text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">M. Ousmane Faye</h3>
+                    <p class="text-sm text-primary font-medium mb-2">Surveillant Général</p>
+                    <p class="text-xs text-gray-500">
+                        Responsable de la discipline et du bien-être des élèves
+                    </p>
+                </div>
+                
+                <!-- Infirmière -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-nurse text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Mme Aminata Sow</h3>
+                    <p class="text-sm text-primary font-medium mb-2">Infirmière Scolaire</p>
+                    <p class="text-xs text-gray-500">
+                        Soins d'urgence et prévention santé
+                    </p>
+                </div>
+                
+                <!-- Bibliothécaire -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Mme Coumba Diagne</h3>
+                    <p class="text-sm text-primary font-medium mb-2">Bibliothécaire</p>
+                    <p class="text-xs text-gray-500">
+                        Gestion du centre de documentation
+                    </p>
+                </div>
+                
+                <!-- Agent d'entretien -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-broom text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">M. Modou Sène</h3>
+                    <p class="text-sm text-primary font-medium mb-2">Agent d'Entretien</p>
+                    <p class="text-xs text-gray-500">
+                        Maintien de la propreté des locaux
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistiques Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Notre Équipe en Chiffres</h2>
+                <p class="text-xl text-blue-100">Des professionnels qualifiés au service de l'excellence</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">50</div>
+                    <div class="text-xl">Enseignants</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">15</div>
+                    <div class="text-xl">Personnel Administratif</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">8</div>
+                    <div class="text-xl">Années d'Expérience Moyenne</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">95%</div>
+                    <div class="text-xl">Formation Continue</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Une équipe dévouée à votre service
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Nos enseignants et personnel administratif sont à votre écoute pour 
+                accompagner votre enfant tout au long de son parcours scolaire.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone mr-2"></i>
+                    Nous contacter
+                </a>
+                <a href="presentation.html" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl">Collège & Lycée Keur Serigne Touba</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Former aujourd'hui les leaders de demain. Un établissement d'excellence qui prépare 
+                        nos élèves à relever les défis du monde moderne.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="presentation.html" class="text-gray-300 hover:text-primary transition-colors">Présentation</a></li>
+                        <li><a href="equipe.html" class="text-gray-300 hover:text-primary transition-colors">Équipe pédagogique</a></li>
+                        <li><a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary transition-colors">Actualités</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Dakar, Sénégal</p>
+                        <p><i class="fas fa-phone mr-2"></i> +221 33 123 45 67</p>
+                        <p><i class="fas fa-envelope mr-2"></i> contact@keurserignetouba.edu.sn</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Collège & Lycée Keur Serigne Touba. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

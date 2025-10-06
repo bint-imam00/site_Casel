@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'histoire, la mission et les valeurs du Collège & Lycée Keur Serigne Touba. Un établissement d'excellence depuis 25 ans.">
+    <meta name="keywords" content="histoire école, mission éducation, valeurs, proviseur, établissement scolaire">
+    <title>Présentation - Collège & Lycée Keur Serigne Touba</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- TailwindCSS Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#0ea5e9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl text-gray-800">Keur Serigne Touba</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                        <a href="presentation.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium bg-blue-50">Présentation</a>
+                        <a href="equipe.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Équipe</a>
+                        <a href="galerie.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Galerie</a>
+                        <a href="blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Actualités</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                <a href="presentation.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-blue-50">Présentation</a>
+                <a href="equipe.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Équipe</a>
+                <a href="galerie.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Galerie</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Actualités</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Présentation de l'établissement</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez l'histoire, les valeurs et la vision du Collège & Lycée Keur Serigne Touba, 
+                    un établissement d'excellence au service de l'éducation sénégalaise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historique Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Notre Histoire</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            Fondé en 1999 par un groupe d'éducateurs passionnés, le Collège & Lycée Keur Serigne Touba 
+                            s'est donné pour mission de contribuer à l'épanouissement de la jeunesse sénégalaise.
+                        </p>
+                        <p>
+                            Depuis plus de 25 ans, notre établissement a formé des milliers d'élèves, leur donnant 
+                            les outils nécessaires pour réussir dans leurs études supérieures et leur vie professionnelle.
+                        </p>
+                        <p>
+                            Nous avons constamment évolué pour nous adapter aux besoins de l'éducation moderne, 
+                            en intégrant les nouvelles technologies tout en préservant nos valeurs traditionnelles.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="assets/img/historique.jpg" alt="Historique de l'établissement" class="rounded-lg shadow-lg w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-3xl font-bold">25+</div>
+                        <div class="text-sm">Années d'excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Valeurs Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Notre Fondement</h2>
+                <p class="text-xl text-gray-600">Les principes qui guident notre action éducative</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Notre Mission</h3>
+                    <p class="text-gray-600">
+                        Offrir une éducation de qualité qui développe l'intelligence, 
+                        la créativité et les valeurs morales de nos élèves, les préparant 
+                        à devenir des citoyens responsables et des leaders de demain.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Notre Vision</h3>
+                    <p class="text-gray-600">
+                        Être un établissement de référence qui forme des jeunes épanouis, 
+                        compétents et engagés pour le développement du Sénégal et de l'Afrique.
+                    </p>
+                </div>
+                
+                <!-- Valeurs -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Nos Valeurs</h3>
+                    <p class="text-gray-600">
+                        Excellence, respect, solidarité, tolérance et engagement. 
+                        Ces valeurs fondamentales guident chaque aspect de notre 
+                        approche éducative.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mot du Proviseur Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Mot du Proviseur</h2>
+                    <blockquote class="text-lg text-gray-600 leading-relaxed mb-6 italic">
+                        "Chaque élève qui franchit nos portes représente un potentiel illimité. 
+                        Notre rôle est de l'accompagner dans la découverte et le développement 
+                        de ses talents uniques. À Keur Serigne Touba, nous croyons fermement 
+                        que l'éducation est la clé d'un avenir meilleur pour notre pays."
+                    </blockquote>
+                    <div class="border-l-4 border-primary pl-6">
+                        <p class="font-semibold text-gray-800">M. Amadou Diallo</p>
+                        <p class="text-gray-600">Proviseur</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Docteur en Sciences de l'Éducation, 15 ans d'expérience dans l'enseignement
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="assets/img/proviseur.jpg" alt="M. Amadou Diallo, Proviseur" class="rounded-lg shadow-lg w-full max-w-sm mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations Pratiques Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Informations Pratiques</h2>
+                <p class="text-xl text-gray-600">Tout ce que vous devez savoir sur notre établissement</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Adresse -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Adresse</h3>
+                    <p class="text-gray-600 text-sm">
+                        Avenue Léopold Sédar Senghor<br>
+                        BP 12345<br>
+                        Dakar, Sénégal
+                    </p>
+                </div>
+                
+                <!-- Horaires -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-primary"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Horaires</h3>
+                    <p class="text-gray-600 text-sm">
+                        Lundi - Vendredi<br>
+                        7h30 - 16h30<br>
+                        <span class="text-primary font-semibold">Samedi</span><br>
+                        7h30 - 12h30
+                    </p>
+                </div>
+                
+                <!-- Contact -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-primary"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Contact</h3>
+                    <p class="text-gray-600 text-sm">
+                        <i class="fas fa-phone mr-1"></i> +221 33 123 45 67<br>
+                        <i class="fas fa-fax mr-1"></i> +221 33 123 45 68<br>
+                        <i class="fas fa-envelope mr-1"></i> contact@keurserignetouba.edu.sn
+                    </p>
+                </div>
+                
+                <!-- Effectifs -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Effectifs</h3>
+                    <p class="text-gray-600 text-sm">
+                        <span class="text-2xl font-bold text-primary">1200</span><br>
+                        élèves<br>
+                        <span class="text-lg font-bold text-primary">50</span><br>
+                        enseignants
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Niveaux d'enseignement Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Niveaux d'Enseignement</h2>
+                <p class="text-xl text-gray-600">Un parcours éducatif complet de la 6ème au Baccalauréat</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">6°</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Sixième</h3>
+                    <p class="text-gray-600 text-sm">Adaptation au collège et consolidation des acquis</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">5°-4°</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Cinquième & Quatrième</h3>
+                    <p class="text-gray-600 text-sm">Approfondissement et préparation à l'orientation</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">3°</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Troisième</h3>
+                    <p class="text-gray-600 text-sm">Préparation au Brevet et orientation lycée</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">L</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Lycée</h3>
+                    <p class="text-gray-600 text-sm">Préparation au Baccalauréat (L, S, ES)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Rejoignez notre communauté éducative
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Inscrivez votre enfant dans un établissement qui valorise l'excellence, 
+                l'épanouissement et la réussite de chaque élève.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone mr-2"></i>
+                    Nous contacter
+                </a>
+                <a href="galerie.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-images mr-2"></i>
+                    Découvrir l'établissement
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl">Collège & Lycée Keur Serigne Touba</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Former aujourd'hui les leaders de demain. Un établissement d'excellence qui prépare 
+                        nos élèves à relever les défis du monde moderne.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="presentation.html" class="text-gray-300 hover:text-primary transition-colors">Présentation</a></li>
+                        <li><a href="equipe.html" class="text-gray-300 hover:text-primary transition-colors">Équipe pédagogique</a></li>
+                        <li><a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary transition-colors">Actualités</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Dakar, Sénégal</p>
+                        <p><i class="fas fa-phone mr-2"></i> +221 33 123 45 67</p>
+                        <p><i class="fas fa-envelope mr-2"></i> contact@keurserignetouba.edu.sn</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Collège & Lycée Keur Serigne Touba. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les dernières actualités du Collège & Lycée Keur Serigne Touba. Nouvelles, événements, résultats et informations importantes.">
+    <meta name="keywords" content="actualités, blog, nouvelles, événements, résultats, école">
+    <title>Actualités - Collège & Lycée Keur Serigne Touba</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- TailwindCSS Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#0ea5e9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl text-gray-800">Keur Serigne Touba</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                        <a href="presentation.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Présentation</a>
+                        <a href="equipe.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Équipe</a>
+                        <a href="galerie.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Galerie</a>
+                        <a href="blog.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium bg-blue-50">Actualités</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                <a href="presentation.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Présentation</a>
+                <a href="equipe.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Équipe</a>
+                <a href="galerie.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Galerie</a>
+                <a href="blog.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-blue-50">Actualités</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Actualités & Blog</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Restez informés des dernières nouvelles, événements et réalisations 
+                    de notre établissement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Article Principal -->
+            <article class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/img/blog-featured.jpg" alt="Résultats exceptionnels au concours régional" class="w-full h-64 md:h-96 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">Concours</span>
+                            <span class="text-gray-500 text-sm">
+                                <i class="fas fa-calendar mr-1"></i>
+                                15 Décembre 2024
+                            </span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Résultats exceptionnels au concours régional de mathématiques
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Nos élèves ont brillé lors du concours régional de mathématiques organisé à Dakar. 
+                            Avec trois premières places et sept mentions, le Collège & Lycée Keur Serigne Touba 
+                            confirme son excellence académique et la qualité de son enseignement des sciences.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-1.jpg" alt="M. Ibrahim Fall" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-semibold text-gray-800">M. Ibrahim Fall</p>
+                                    <p class="text-sm text-gray-500">Professeur de Mathématiques</p>
+                                </div>
+                            </div>
+                            <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                Lire l'article complet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Grille d'articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-1.jpg" alt="Cérémonie de remise des diplômes" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Événement</span>
+                            <span class="text-gray-500 text-sm">10 Décembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Cérémonie de remise des diplômes 2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Une cérémonie émouvante pour célébrer la réussite de nos bacheliers. 
+                            Félicitations à tous les lauréats !
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-2.jpg" alt="M. Amadou Diallo" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">M. Amadou Diallo</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-2.jpg" alt="Nouveau laboratoire informatique" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Innovation</span>
+                            <span class="text-gray-500 text-sm">5 Décembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Ouverture du nouveau laboratoire informatique</h3>
+                        <p class="text-gray-600 mb-4">
+                            Un espace moderne équipé des dernières technologies pour l'enseignement 
+                            de l'informatique et de la programmation.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-3.jpg" alt="Mme Aïcha Diop" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">Mme Aïcha Diop</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-3.jpg" alt="Sortie éducative" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Sortie</span>
+                            <span class="text-gray-500 text-sm">2 Décembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Sortie éducative au musée IFAN</h3>
+                        <p class="text-gray-600 mb-4">
+                            Nos élèves de 4ème ont découvert le riche patrimoine culturel sénégalais 
+                            lors d'une visite guidée enrichissante.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-4.jpg" alt="Mme Mariama Gueye" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">Mme Mariama Gueye</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-4.jpg" alt="Tournoi de football" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Sport</span>
+                            <span class="text-gray-500 text-sm">28 Novembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Victoire au tournoi inter-établissements</h3>
+                        <p class="text-gray-600 mb-4">
+                            Notre équipe de football remporte brillamment le tournoi inter-établissements 
+                            de Dakar. Bravo aux joueurs et à l'encadrement !
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-5.jpg" alt="M. Ousmane Faye" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">M. Ousmane Faye</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-5.jpg" alt="Formation des enseignants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Formation</span>
+                            <span class="text-gray-500 text-sm">25 Novembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Formation continue des enseignants</h3>
+                        <p class="text-gray-600 mb-4">
+                            Session de formation sur les nouvelles méthodes pédagogiques et 
+                            l'utilisation du numérique en classe.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-6.jpg" alt="Mme Fatou Sarr" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">Mme Fatou Sarr</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="assets/img/blog-6.jpg" alt="Cérémonie de rentrée" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-3">Rentrée</span>
+                            <span class="text-gray-500 text-sm">20 Novembre 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Bienvenue aux nouveaux élèves</h3>
+                        <p class="text-gray-600 mb-4">
+                            Cérémonie d'accueil pour les nouveaux élèves de 6ème et leurs familles. 
+                            Un moment convivial pour commencer l'année.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="assets/img/author-7.jpg" alt="M. Mamadou Ba" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm font-medium text-gray-700">M. Mamadou Ba</span>
+                            </div>
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex space-x-2">
+                    <button class="px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        1
+                    </button>
+                    <button class="px-4 py-2 bg-white text-gray-700 border rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        2
+                    </button>
+                    <button class="px-4 py-2 bg-white text-gray-700 border rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        3
+                    </button>
+                    <button class="px-4 py-2 bg-white text-gray-700 border rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        Suivant
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-2xl p-8 md:p-12 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Restez informés</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Inscrivez-vous à notre newsletter pour recevoir les dernières actualités 
+                    et informations importantes de l'établissement.
+                </p>
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Votre adresse email" class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        S'inscrire
+                    </button>
+                </form>
+                <p class="text-sm text-blue-200 mt-4">
+                    Nous respectons votre vie privée. Désabonnement possible à tout moment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégories Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Catégories d'actualités</h2>
+                <p class="text-xl text-gray-600">Explorez nos articles par thème</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Concours & Résultats</h3>
+                    <p class="text-sm text-gray-600">Les performances de nos élèves</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Événements</h3>
+                    <p class="text-sm text-gray-600">Cérémonies et célébrations</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Pédagogie</h3>
+                    <p class="text-sm text-gray-600">Innovations et méthodes d'enseignement</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-pink-100 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-futbol text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Vie Scolaire</h3>
+                    <p class="text-sm text-gray-600">Sports et activités extra-scolaires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                        <span class="font-bold text-xl">Collège & Lycée Keur Serigne Touba</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Former aujourd'hui les leaders de demain. Un établissement d'excellence qui prépare 
+                        nos élèves à relever les défis du monde moderne.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="presentation.html" class="text-gray-300 hover:text-primary transition-colors">Présentation</a></li>
+                        <li><a href="equipe.html" class="text-gray-300 hover:text-primary transition-colors">Équipe pédagogique</a></li>
+                        <li><a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary transition-colors">Actualités</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Dakar, Sénégal</p>
+                        <p><i class="fas fa-phone mr-2"></i> +221 33 123 45 67</p>
+                        <p><i class="fas fa-envelope mr-2"></i> contact@keurserignetouba.edu.sn</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Collège & Lycée Keur Serigne Touba. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
