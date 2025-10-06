@@ -1,8 +1,8 @@
-# Site Web - Collège & Lycée Keur Serigne Touba
+# Site Web - Établissement Privé Casel
 
 ## 📋 Description
 
-Site web statique complet et professionnel pour un établissement scolaire (collège et lycée). Le site présente l'établissement de manière attractive et crédible avec un design moderne, responsive et facilement modifiable.
+Site web statique complet et professionnel pour l'établissement privé Casel. Le site présente l'établissement de manière attractive et crédible avec un design moderne, responsive et facilement modifiable.
 
 ## 🎯 Caractéristiques
 
@@ -281,7 +281,7 @@ Ce projet est libre d'utilisation pour des établissements scolaires. Vous pouve
 
 ---
 
-**Collège & Lycée Keur Serigne Touba**  
+**Établissement Privé Casel**  
 *Former aujourd'hui les leaders de demain*
 
 © 2024 - Tous droits réservés
